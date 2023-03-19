@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Babylonica&family=Benne&family=Electrolize&family=Inconsolata:wght@900&family=Lato&family=Libre+Franklin:wght@700&family=Montserrat:wght@700&family=Noto+Serif+Ahom&family=Oswald:wght@700&family=Raleway:wght@600&family=Sassy+Frass&family=Sen:wght@400;700&family=Source+Code+Pro:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Babylonica&family=Benne&family=Electrolize&family=Golos+Text:wght@800&family=Inconsolata:wght@900&family=Lato&family=Libre+Franklin:wght@700&family=Montserrat:wght@700&family=Noto+Serif+Ahom&family=Oswald:wght@700&family=Sassy+Frass&family=Sen:wght@400;700&family=Source+Code+Pro:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    position: relative;
+    padding-top: 2%;
+}
+
+
+.mblue {
+    color: "#7D4DFF";
+}
+
+.basefont {
+    font-family: 'Raleway';
+}
+
+.title {
+    font-family: 'Raleway';
+    font-size: 5em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+.selection {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+
+.selection select,
+.pop-up select {
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid black;
+    transition: 0.5s;
+    margin-right: 5px;
+    padding: 10px;
+}
+
+
+.selection select:hover,
+.pop-up select:hover {
+    cursor: pointer;
+    border: 2px solid rgb(125, 77, 255);
+    transition: 0.5s;
+}
+
+.selection label {
+    font-size: 1.2em;
+    font-family: 'Raleway';
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    margin-top: 4%;
+    border: 1px solid black;
+    display: flex;
+    margin-bottom: 40px;
+
+}
+
+.left-sub {
+    background-color: rgb(125, 77, 255);
+    flex-basis: 45%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.left-sub i {
+    font-size: 10em;
+    color: white;
+    font-weight: bold;
+}
+
+.left-sub img {
+    width: 150px;
+    height: 150px;
+}
+
+.degree {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.state {
+    font-size: 1.5em;
+    margin-top: 5px;
+    color: white;
+    text-align: center;
+}
+
+
+.notes {
+    padding: 30px 20px;
+
+}
+
+.tasks {
+    display: flex;
+    overflow: auto;
+    height: 200px;
+}
+
+
+.listview::-webkit-scrollbar {
+
+    width: 0;
+    height: 0;
+    background: transparent;
+}
+
+
+.listview {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.listview li {
+    margin-top: 25px;
+    display: flex;
+
+}
+
+.roundedTime {
+    border-radius: 15px;
+    background-color: white;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 0.9em;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-right: 10px;
+
+}
+
+
+
+.right-sub {
+    background-color: white;
+    flex-basis: 55%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.selectDate {
+    display: flex;
+    font-size: 3em;
+    color: rgb(125, 77, 255);
+    font-weight: bolder;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'Golos Text', sans-serif;
+    border-bottom: 1px solid gray;
+    flex-basis: 15%;
+}
+
+
+.selectDate i {
+    font-size: 1em !important;
+    transition: 0.5s;
+}
+
+.selectDate i:hover {
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.dateDisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 85%;
+
+}
+
+.table {
+    border-collapse: collapse;
+    font-size: 16px;
+    width: 100%;
+    border: 0.5px solid white;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+.table th,
+td {
+    padding: 15px 15px;
+    font-weight: bold;
+    font-family: 'Golos Text', sans-serif;
+    text-align: center;
+}
+
+.table th {
+    color: rgb(25, 227, 177);
+    font-size: 1.3em;
+}
+
+.table td {
+    color: black;
+    font-weight: bold;
+    font-size: 1em;
+    transition: 0.5s;
+}
+
+
+.table td:hover {
+    background-color: rgb(125, 77, 255) !important;
+    color: white !important;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.table tbody tr {
+    border-bottom: 0.05px dotted gray;
+}
+
+
+.pop-up {
+    width: 50%;
+    display: none;
+    justify-content: center;
+    border: 1px solid black;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 2%; 
+    position: relative;
+    border-radius: 10px;
+    background-color:black;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+
+.pop-up .left {
+    flex-basis: 70%;
+    border: 1px solid black;
+    padding: 10px;
+    background-color: rgb(25, 227, 177);
+    margin-top: 20px;
+}
+
+
+.pop-up label {
+    font-family: 'Raleway';
+    font-size: 1em;
+    margin-right: 5px;
+    vertical-align: top;
+    color: white;
+}
+
+.time-select {
+    width: 70%;
+}
+
+.time-select input {
+    border: 2px solid black;
+    border-radius: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 0px 15px;
+}
+
+.time-select input:hover {
+    cursor: pointer;
+}
+
+.message {
+    margin-top: 20px;
+    width: 70%;
+}
+
+.message textarea {
+    border-radius: 10px;
+    width: 250px;
+    padding: 10px;
+
+}
+
+
+.pop-up .right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 30%;
+    border: 1px solid black;
+    background-color: rgb(125, 77, 255);
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pop-up .date {
+    font-family: 'Raleway';
+    font-size: bold;
+    color: white;
+}
+
+.small {
+    font-size: 1.5em;
+}
+
+.big {
+    font-size: 2.5em;
+}
+
+
+.pop-up i
+{
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    font-size: 1.5em;
+    color: white;
+    background-color: red;
+    padding: 10px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+.pop-up i:hover
+{
+    background-color: darkred;
+    cursor: pointer;
+}

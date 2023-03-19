@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body>
+
+   
+
+    <p class="title">Your Calendar</p>
+    <section class="selection">
+        <div>
+            <label for="year">Year</label>
+            <select name="year" id="year">
+
+            </select>
+        </div>
+
+        <div>
+            <label for="month">Country</label>
+            <select name="country" id="country"></select>
+        </div>
+
+        <div>
+            <label for="month">Month</label>
+            <select name="month" id="month"></select>
+        </div>
+    </section>
+    <section class="container">
+        <section class="left-sub">
+            <section style="padding-top: 40px; display: flex; flex-direction: column; align-items: center; ">
+                <img id="icon" src="" alt="#">
+                <p id="degree" class="degree"> &deg;C</p>
+                <p id="state" class="state"></p>
+            </section>
+
+            <section class="notes">
+                <p id="tasktext" class="basefont" style="font-size: 1em; color: white;;"></p>
+
+                <div id="tasks" class="tasks">
+                    <ul class="listview">
+                    
+                    </ul>
+                </div>
+            </section>
+        </section>
+
+        <section class="right-sub">
+            <section class="selectDate">
+                <i onclick="PrevClick()" class="fa-solid fa-chevron-left"></i>
+                <p id="date_title" class="date">JULY 2018</p>
+                <i onclick="NextClick()" class="fa-solid fa-chevron-right"></i>
+            </section>
+
+            <section class="dateDisplay">
+                <section class="table">
+                    <table id="table" class="content-table animate__animated ">
+                        <thead>
+                            <tr>
+                                <th>SUN</th>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                                <th>SAT</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="calendar">
+
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+        </section>
+    </section>
+
+    <section id="pop-up" class="pop-up">
+        <i onclick="ClosePopUp()" class="fa-solid fa-x"></i>
+        <div class="left">
+
+            <div class="time-select">
+                <label for="timePicker">Select a time:</label>
+                <input type="time" id="timePicker" name="timePicker">
+            </div>
+
+            <div class="message">
+                <label for="text">Record your text:</label>
+                <textarea id="myTextarea" name="myTextarea" rows="5"></textarea>
+
+            </div>
+
+        </div>
+
+
+        <div class="right">
+            <p id="y" class="date big">2017</p>
+            <p id="date" class="date small">3 January</p>
+        </div>
+
+    </section>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
