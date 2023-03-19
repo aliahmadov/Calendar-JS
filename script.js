@@ -611,9 +611,9 @@ function ClosePopUp() {
 
     notes = GetResultCookie();
     notes += `${selectedYear}&${selectedMonth}&${selectedDay}&${timePicker.value}&'${text_area.value}'=`;
-
+    
     setCookie('notes', notes, 3600);
-
+    alert("Saved");
 
 }
 
